@@ -1,0 +1,22 @@
+{
+  "name": "<%= project_name %>",
+  "description": "<%= project_desc %>",
+  "main": "index.js",
+  "authors": [
+    "<%= author %>"
+  ],
+  "license": "<%= license %>",
+  "homepage": "",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "normalize-css": "normalize.css#~3.0.3",
+    "sanitize-css": "~3.0.0"
+  }
+}
