@@ -46,8 +46,8 @@ var FrontendDevel = yeoman.generators.Base.extend({
 
   writing: function () {
     try {
-      mkdir.sync(this.destinationPath('view/include'));
-      mkdir.sync(this.destinationPath('view/layout'));
+      mkdir.sync(this.destinationPath('views/include'));
+      mkdir.sync(this.destinationPath('views/layout'));
 
       mkdir.sync(this.destinationPath('assets/babel/action'));
       mkdir.sync(this.destinationPath('assets/babel/component'));
@@ -93,6 +93,10 @@ var FrontendDevel = yeoman.generators.Base.extend({
     this.fs.copy(
       this.templatePath('views'),
       this.destinationPath('views')
+    );
+    this.fs.copy(
+      this.templatePath('assets/babel/core.js'),
+      this.destinationPath('assets/babel/core.js')
     );
     this.fs.copy(
       this.templatePath('reset.css'),
