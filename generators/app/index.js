@@ -33,7 +33,7 @@ var FrontendDevel = yeoman.generators.Base.extend({
       name: 'license',
       message: 'License',
       choices: ['MIT', 'Apache v2 License', 'GPL v2', 'LGPL v3', 'none'],
-      default: ''
+      default: 'none'
     }];
 
     this.prompt(prompts, function (props) {
@@ -71,15 +71,15 @@ var FrontendDevel = yeoman.generators.Base.extend({
       this.destinationPath('circle.yml')
     );
     this.fs.copy(
-      this.templatePath('.babelrc'),
+      this.templatePath('_.babelrc'),
       this.destinationPath('.babelrc')
     );
     this.fs.copy(
-      this.templatePath('.editorconfig'),
+      this.templatePath('_.editorconfig'),
       this.destinationPath('.editorconfig')
     );
     this.fs.copy(
-      this.templatePath('.gitignore'),
+      this.templatePath('_.gitignore'),
       this.destinationPath('.gitignore')
     );
     this.fs.copy(
