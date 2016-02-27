@@ -7,6 +7,7 @@ gzip = require 'gulp-gzip'
 replace = require 'gulp-replace'
 nib = require 'nib'
 paths = require('../config').paths
+plumber = require 'gulp-plumber'
 
 
 gulp.task 'stylus', () ->
