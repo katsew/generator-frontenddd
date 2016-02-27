@@ -6,7 +6,7 @@ runSequence = require 'run-sequence'
 gulp.task 'watch', () ->
 
   watch ["#{paths.src.babel}/**/*.js"], () ->
-    runSequence('babel')
+    runSequence('webpack:dev')
 
   watch ["#{paths.src.jade}/**/!(_)*.jade"], () ->
     runSequence('jade')

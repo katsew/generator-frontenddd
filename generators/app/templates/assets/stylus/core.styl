@@ -1,0 +1,43 @@
+@import "nib/normalize"
+@import "nib/clearfix"
+@import "deps/*"
+
+normalize-css()
+
+*
+  box-sizing border-box
+
+body, html
+  background-color black
+  color white
+  font-family $fontfamily_sans
+
+ul, li
+  list-style none
+  padding 0
+  margin 0
+
+p
+  margin 0
+
+h1, h2, h3
+  margin 0
+
+img
+  width auto
+  max-width 100%
+  vertical-align middle
+
+a
+  color inherit
+  text-decoration underline
+  &:hover
+    text-decoration none
+
+fieldset
+  border 0
+  margin 0
+  padding 0
+
+.clearfix
+  clearfix()

@@ -75,6 +75,10 @@ var FrontendDevel = yeoman.generators.Base.extend({
       this.destinationPath('.babelrc')
     );
     this.fs.copy(
+      this.templatePath('_eslintrc.json'),
+      this.destinationPath('.eslintrc.json')
+    );
+    this.fs.copy(
       this.templatePath('_.editorconfig'),
       this.destinationPath('.editorconfig')
     );
@@ -102,6 +106,19 @@ var FrontendDevel = yeoman.generators.Base.extend({
       this.templatePath('reset.css'),
       this.destinationPath('assets/stylus/reset/reset.css')
     );
+    this.fs.copy(
+      this.templatePath('assets/stylus/deps/variables.styl'),
+      this.destinationPath('assets/stylus/deps/variables.styl')
+    );
+    this.fs.copy(
+      this.templatePath('assets/stylus/core.styl'),
+      this.destinationPath('assets/stylus/core.styl')
+    );
+    this.fs.copy(
+      this.templatePath('webpack'),
+      this.destinationPath('webpack')
+    );
+
     this.fs.copyTpl(
       this.templatePath('_package.json'),
       this.destinationPath('package.json'),

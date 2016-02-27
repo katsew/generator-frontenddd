@@ -10,11 +10,10 @@ html(lang='ja')
       link(rel='stylesheet', href='/assets/css/core.css?#{Date.now()}')
   body
     .container
-      include ../include/notification.jade
-
-      .container-inner
-        include ../include/header.jade
+      include ../include/header.jade
+      .content
         block content
-        include ../include/footer.jade
+      include ../include/footer.jade
+    include ../include/notification.jade
     block script
       script(type='text/javascript', src='/assets/js/core.js?#{Date.now()}')

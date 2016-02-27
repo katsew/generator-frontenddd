@@ -7,7 +7,7 @@ dir = requireDir('./gulp', {recurse: true})
 
 gulp.task 'dev', ->
   runSequence(
-    ['jade', 'stylus', 'babel'],
+    ['jade', 'stylus', 'webpack:dev'],
     ['watch', 'browserSync']
   )
 
@@ -16,11 +16,11 @@ gulp.task 'watch:all', ->
 
 gulp.task 'release', ->
   runSequence(
-    ['jade', 'stylus', 'babel']
+    ['jade', 'stylus', 'webpack:release']
   )
 
 gulp.task 'default', ->
   runSequence(
-    ['jade', 'stylus', 'babel'],
+    ['jade', 'stylus', 'webpack:dev'],
     ['watch', 'browserSync']
   )

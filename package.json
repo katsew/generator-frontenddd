@@ -2,11 +2,11 @@
   "name": "generator-frontenddd",
   "version": "0.1.2",
   "description": "frontenddd!!!",
-  "homepage": "",
+  "homepage": "https://github.com/katsew/generator-frontenddd",
   "author": {
     "name": "katsew",
     "email": "y.katsew@gmail.com",
-    "url": ""
+    "url": "https://github.com/katsew/generator-frontenddd"
   },
   "files": [
     "generators"

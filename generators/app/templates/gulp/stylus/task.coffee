@@ -4,13 +4,18 @@ autoPrefixer = require 'gulp-autoprefixer'
 csscomb = require 'gulp-csscomb'
 cssmin = require 'gulp-cssmin'
 gzip = require 'gulp-gzip'
+replace = require 'gulp-replace'
+nib = require 'nib'
 paths = require('../config').paths
 
 
 gulp.task 'stylus', () ->
   return gulp.src ["#{paths.src.stylus}/**/!(_)*.styl"]
+    .pipe plumber()
     .pipe stylus
       compress: true
+      use: [nib()]
+    .pipe replace(/CONST_IMAGE_HOST/g, 'localhost')
     .pipe autoPrefixer({
       browsers: ['last 3 version', 'Android 2.3']
     })
