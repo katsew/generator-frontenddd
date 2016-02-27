@@ -99,20 +99,12 @@ var FrontendDevel = yeoman.generators.Base.extend({
       this.destinationPath('views')
     );
     this.fs.copy(
-      this.templatePath('assets/babel/core.js'),
-      this.destinationPath('assets/babel/core.js')
+      this.templatePath('assets'),
+      this.destinationPath('assets')
     );
     this.fs.copy(
       this.templatePath('reset.css'),
       this.destinationPath('assets/stylus/reset/reset.css')
-    );
-    this.fs.copy(
-      this.templatePath('assets/stylus/deps/variables.styl'),
-      this.destinationPath('assets/stylus/deps/variables.styl')
-    );
-    this.fs.copy(
-      this.templatePath('assets/stylus/core.styl'),
-      this.destinationPath('assets/stylus/core.styl')
     );
     this.fs.copy(
       this.templatePath('webpack'),
