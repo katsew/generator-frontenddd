@@ -8,8 +8,8 @@ gulp.task 'watch', () ->
   watch ["#{paths.src.babel}/**/*.js"], () ->
     runSequence('webpack:dev')
 
-  watch ["#{paths.src.jade}/**/!(_)*.jade"], () ->
-    runSequence('jade')
+  watch ["#{paths.src.pug}/**/!(_)*.pug"], () ->
+    runSequence('pug')
 
   watch ["#{paths.src.stylus}/**/!(_)*.styl"], () ->
     runSequence('stylus')

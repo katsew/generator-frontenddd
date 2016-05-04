@@ -3,5 +3,5 @@
 const path = require('path');
 const current = process.cwd();
 module.exports = {
-  core: path.join(current, 'assets/babel/core/index'),
+  core: ['babel-polyfill', path.join(current, 'assets/babel/core/index')],
 };

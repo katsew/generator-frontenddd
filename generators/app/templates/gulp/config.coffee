@@ -1,6 +1,6 @@
 paths = {}
 paths.src =
-  jade: "views"
+  pug: "views"
   stylus: "assets/stylus"
   babel: "assets/babel"
   image: "assets/image"
