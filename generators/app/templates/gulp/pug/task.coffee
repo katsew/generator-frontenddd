@@ -1,11 +1,9 @@
 gulp = require 'gulp'
-rawJade = require 'jade'
-jade = require 'gulp-jade'
+pug = require 'gulp-pug'
 paths = require('../config').paths
 
-gulp.task 'jade', () ->
-  gulp.src ["#{paths.src.jade}/**/!(_)*.jade", "!#{paths.src.jade}/layout/*.jade", "!#{paths.src.jade}/include/*.jade"]
-    .pipe jade
-      jade: rawJade
+gulp.task 'pug', () ->
+  gulp.src ["#{paths.src.pug}/**/!(_)*.pug", "!#{paths.src.pug}/layout/*.pug", "!#{paths.src.pug}/include/*.pug"]
+    .pipe pug
       pretty: true
     .pipe gulp.dest "#{paths.dest.html}"
