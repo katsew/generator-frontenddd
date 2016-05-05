@@ -8,7 +8,9 @@ describe('generator-frontenddd:app', function () {
     helpers.run(path.join(__dirname, '../generators/app'))
       .withOptions({someOption: true})
       .withPrompts({someAnswer: true})
-      .on('end', done);
+      .on('end', done)
+      .on('error', done)
+      .on('timeout', done);
   });
 
   it('creates files', function () {
