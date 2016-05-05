@@ -1,3 +1,5 @@
+'use strict';
+
 module.exports = {
   module: {
     loaders: [
@@ -6,7 +8,7 @@ module.exports = {
         exclude: /(node_modules|bower_components)/,
         loader: 'babel?presets[]=react,presets[]=es2015'
       },
-      { test: /\.js$/, loader: "webpack-strip?strip[]=console.log" }
+      { test: /\.js$/, loader: 'webpack-strip?strip[]=console.log' }
     ]
   }
 };

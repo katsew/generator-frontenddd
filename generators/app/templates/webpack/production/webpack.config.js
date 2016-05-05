@@ -1,4 +1,5 @@
-"use strict";
+'use strict';
+
 const _ = require('lodash');
 const base = require('./base.js');
 const loaders = require('./loader.js');
